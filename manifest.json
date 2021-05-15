@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Agat Group Car Information",
+  "description": "Расширение предоставляет информацию по автомобилю",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_title": "Agat Group Car Information",
+    "default_icon": "popup/imgs/icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

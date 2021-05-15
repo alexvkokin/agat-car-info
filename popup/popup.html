@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>Agat Group Car Information</title>
+    <meta charset="UTF-8">
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+    <link href="css/popup.css" rel="stylesheet">
+    <script src="js/popup.js"></script>
+</head>
+<body id="carInfoWin">
+<div class="container">
+    <form class="mt-2 mb-2" id="getCarInfo">
+        <div class="h5">Поиск информации по авто</div>
+        <div class="mb-3">
+            <label for="vinFormControl" class="form-label">Введите vin авто</label>
+            <input type="text" name="vin" class="form-control" id="vinFormControl" autocomplete="off" required>
+        </div>
+
+        <div>Где искать авто</div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="server" id="serverProd" value="prod" checked>
+            <label class="form-check-label" for="serverProd">Бой</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="server" id="serverDev" value="dev">
+            <label class="form-check-label" for="serverDev">Дев</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="server" id="serverLocal" value="local">
+            <label class="form-check-label" for="serverLocal">Локально</label>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Поиск">
+    </form>
+
+    <div id="carInfoResult" class="mt-2 d-none" >
+        <hr class="">
+        <div class="h5 js-info_result-count">Результат поиска, найдено <span></span> авто</div>
+    </div>
+
+    <div id="carTemplate" class="card d-none mt-4" style="">
+        <img src="" class="card-img-top js-car_template-img" alt="...">
+        <div class="card-body">
+            <h5 class="card-title js-car_template-title d-inline">Card title
+
+            </h5>
+            <span class="float-end btn btn-primary btn-sm d-inline" role="alert">Новая</span>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong class="js-car_template-price"></strong>
+                <small><strike class="js-car_template-price_sale "></strike></small>
+            </li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link" target="_blank">Детальная страница</a>
+            <a href="#" class="card-link" target="_blank">Админка</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
